@@ -1,0 +1,100 @@
+*{margin: 0;padding: 0;box-sizing: border-box;outline: none;}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+}
+.content_box{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent,transparent , #0005);
+    background-color: #333;
+    padding: 0px 30px;
+    overflow: hidden;
+}
+h1{
+    font-size: 2.5rem;
+    text-shadow: 2px 1px rgb(197, 197, 197);
+    letter-spacing: 5px;
+    color: rgba(4, 255, 171, 0.333);
+    margin-bottom: 30px;
+}
+.input_box{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #111;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+input{
+    width: 80%;
+    background-color: #222;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    color: white;
+}
+.show{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    margin: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.show::before{
+    content: "SHOW";
+}
+.hide::before{
+    content: "HIDE";
+}
+.strength{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    transition: 0.3s;
+    background-color: #222;
+}
+.strength::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: #222;
+}
+.empty{
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0);
+}
+.weak{
+    width: 10%;
+    background-color: #f00;
+    filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 10px #f00) drop-shadow(0 0 20px #f00) drop-shadow(0 0 30px #f00);
+}
+.medium{
+    width: 50%;
+    background-color: #ffa500;
+    filter: drop-shadow(0 0 5px #ffa500) drop-shadow(0 0 10px #ffa500) drop-shadow(0 0 20px #ffa500) drop-shadow(0 0 30px #ffa500);
+}
+.strong{
+    width: 100%;
+    background-color: #0f0;
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 10px #0f0) drop-shadow(0 0 20px #0f0) drop-shadow(0 0 30px #0f0);
+}
